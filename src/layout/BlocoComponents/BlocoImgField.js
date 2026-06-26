@@ -115,7 +115,7 @@ export default function BlocoImgField({ titulo, texto, setAcertou }) {
         var hoje = new Date().toLocaleString().substr(0, 10)
         if (lineups.length > 0 && players && players.length>0) {
 
-            setLineupDoDia(lineups[generateidPerDate({ tamanho: lineups.length })]-2);
+            setLineupDoDia(lineups[generateidPerDate({ tamanho: lineups.length })-2]);
             /*if(localStorage.getItem("date")!=hoje)
             {
                 localStorage.removeItem("listRes")
