@@ -56,15 +56,21 @@
     @media (max-width:450px) {
     .menu{
         width: 98%;
+        display: flex;
 
     }
     .containerMenu{
         width: 98%;
+        display: flex;
     }
     .ropeBackGround{
         display: none;
     }
     .social_list li{
         margin-right: 0.5em;
+        display: flex;
+    }
+    .social_list img{
+        width: 70px;
     }
 }
