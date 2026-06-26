@@ -9,18 +9,18 @@ export default function BlocoImgField({ titulo, texto, setAcertou }) {
     const [players, setPlayers] = useState([])
     const [lineups, setLineups] = useState([])
     const [lineupDoDia, setLineupDoDia] = useState([])
-    const [player1Pos, setPlayer1Pos] = useState();
-    const [player2Pos, setPlayer2Pos] = useState();
-    const [player3Pos, setPlayer3Pos] = useState();
-    const [player4Pos, setPlayer4Pos] = useState();
-    const [player5Pos, setPlayer5Pos] = useState();
-    const [player6Pos, setPlayer6Pos] = useState();
-    const [player7Pos, setPlayer7Pos] = useState();
-    const [player8Pos, setPlayer8Pos] = useState();
-    const [player9Pos, setPlayer9Pos] = useState();
-    const [player10Pos, setPlayer10Pos] = useState();
-    const [player11Pos, setPlayer11Pos] = useState();
-    const [playerSelected, setPlayerSelected] = useState();
+    const [player1Pos, setPlayer1Pos] = useState(null);
+    const [player2Pos, setPlayer2Pos] = useState(null);
+    const [player3Pos, setPlayer3Pos] = useState(null);
+    const [player4Pos, setPlayer4Pos] = useState(null);
+    const [player5Pos, setPlayer5Pos] = useState(null);
+    const [player6Pos, setPlayer6Pos] = useState(null);
+    const [player7Pos, setPlayer7Pos] = useState(null);
+    const [player8Pos, setPlayer8Pos] = useState(null);
+    const [player9Pos, setPlayer9Pos] = useState(null);
+    const [player10Pos, setPlayer10Pos] = useState(null);
+    const [player11Pos, setPlayer11Pos] = useState(null);
+    const [playerSelected, setPlayerSelected] = useState(null);
 
     const [player1Camisa, setPlayer1Camisa] = useState(0);
     const [player2Camisa, setPlayer2Camisa] = useState(0);
@@ -31,7 +31,7 @@ export default function BlocoImgField({ titulo, texto, setAcertou }) {
     const [player7Camisa, setPlayer7Camisa] = useState(0);
     const [player8Camisa, setPlayer8Camisa] = useState(0);
     const [player9Camisa, setPlayer9Camisa] = useState(0);
-    const [player10Camisa, setPlayer10Camisa] = useState(0);
+    const [player10Camisa, setPlayer10Camisa] = useState(null);
     const [player11Camisa, setPlayer11Camisa] = useState(0);
 
     const [player1class, setPlayer1class] = useState('');
@@ -184,7 +184,7 @@ export default function BlocoImgField({ titulo, texto, setAcertou }) {
         lineupDoDia.players &&
         players.length > 0 &&
         player1Pos &&
-        player11Pos;
+        player11Pos&&player10Camisa&&player1Pos;
 
 
     if (carregado) {
