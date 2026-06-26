@@ -184,45 +184,46 @@ export default function BlocoImgField({ titulo, texto, setAcertou }) {
         lineupDoDia.players &&
         players.length > 0 &&
         player1Pos &&
-        player11Pos&&player10Camisa&&player1Pos;
+        player11Pos && player10Camisa && player1Pos;
 
-
-    if (carregado) {
-        return (
-            <>
-
-                <div className={styles.BlocoTexto}>
-                    <h1>{titulo}</h1>
-                    <p>Use as dicas para adivinhar o elenco </p>
-                    <p>titular da seleção <b>{lineupDoDia.pais} na final da copa de {lineupDoDia.ano}</b></p>
-                    <div className={styles.imgContainer}>
-                        <img className={styles.fieldImg} src={ImgField} alt={titulo} />
-                        <div className={styles.fieldImgContainer}>
-
-                            <>
-                                <img className={` ${styles[player1Pos]} ${styles[player1class]}`} onClick={() => abrirModal(0, setPlayer1class)} src={images2[player1Camisa]} alt="Jogador" />
-                                <img className={` ${styles[player2Pos]} ${styles[player2class]}`} onClick={() => abrirModal(1, setPlayer2class)} src={images2[player2Camisa]} alt="Jogador" />
-                                <img className={` ${styles[player3Pos]} ${styles[player3class]}`} onClick={() => abrirModal(2, setPlayer3class)} src={images2[player3Camisa]} alt="Jogador" />
-                                <img className={` ${styles[player4Pos]} ${styles[player4class]}`} onClick={() => abrirModal(3, setPlayer4class)} src={images2[player4Camisa]} alt="Jogador" />
-                                <img className={` ${styles[player5Pos]} ${styles[player5class]}`} onClick={() => abrirModal(4, setPlayer5class)} src={images2[player5Camisa]} alt="Jogador" />
-                                <img className={` ${styles[player6Pos]} ${styles[player6class]}`} onClick={() => abrirModal(5, setPlayer6class)} src={images2[player6Camisa]} alt="Jogador" />
-                                <img className={` ${styles[player7Pos]} ${styles[player7class]}`} onClick={() => abrirModal(6, setPlayer7class)} src={images2[player7Camisa]} alt="Jogador" />
-                                <img className={` ${styles[player8Pos]} ${styles[player8class]}`} onClick={() => abrirModal(7, setPlayer8class)} src={images2[player8Camisa]} alt="Jogador" />
-                                <img className={` ${styles[player9Pos]} ${styles[player9class]}`} onClick={() => abrirModal(8, setPlayer9class)} src={images2[player9Camisa]} alt="Jogador" />
-                                <img className={` ${styles[player10Pos]} ${styles[player10class]}`} onClick={() => abrirModal(9, setPlayer10class)} src={images2[player10Camisa]} alt="Jogador" />
-                                <img className={` ${styles[player11Pos]} ${styles[player11class]}`} onClick={() => abrirModal(10, setPlayer11class)} src={images2[player11Camisa]} alt="Jogador" />
-                            </>
-
-
-                        </div>
-                    </div>
-
-                    <ModalLineup isOpen={open} setOpen={setOpen} players={players} playerSelected={playerSelected} setCustomclass={customclass} lineup={lineupDoDia} setImage={setImages2} />
-                </div>
-
-
-            </>
-        )
+    if (!carregado) {
+        return <div>Carregando...</div>;
     }
 
+    return (
+        <>
+
+            <div className={styles.BlocoTexto}>
+                <h1>{titulo}</h1>
+                <p>Use as dicas para adivinhar o elenco </p>
+                <p>titular da seleção <b>{lineupDoDia.pais} na final da copa de {lineupDoDia.ano}</b></p>
+                <div className={styles.imgContainer}>
+                    <img className={styles.fieldImg} src={ImgField} alt={titulo} />
+                    <div className={styles.fieldImgContainer}>
+
+                        <>
+                            <img className={` ${styles[player1Pos]} ${styles[player1class]}`} onClick={() => abrirModal(0, setPlayer1class)} src={images2[player1Camisa]} alt="Jogador" />
+                            <img className={` ${styles[player2Pos]} ${styles[player2class]}`} onClick={() => abrirModal(1, setPlayer2class)} src={images2[player2Camisa]} alt="Jogador" />
+                            <img className={` ${styles[player3Pos]} ${styles[player3class]}`} onClick={() => abrirModal(2, setPlayer3class)} src={images2[player3Camisa]} alt="Jogador" />
+                            <img className={` ${styles[player4Pos]} ${styles[player4class]}`} onClick={() => abrirModal(3, setPlayer4class)} src={images2[player4Camisa]} alt="Jogador" />
+                            <img className={` ${styles[player5Pos]} ${styles[player5class]}`} onClick={() => abrirModal(4, setPlayer5class)} src={images2[player5Camisa]} alt="Jogador" />
+                            <img className={` ${styles[player6Pos]} ${styles[player6class]}`} onClick={() => abrirModal(5, setPlayer6class)} src={images2[player6Camisa]} alt="Jogador" />
+                            <img className={` ${styles[player7Pos]} ${styles[player7class]}`} onClick={() => abrirModal(6, setPlayer7class)} src={images2[player7Camisa]} alt="Jogador" />
+                            <img className={` ${styles[player8Pos]} ${styles[player8class]}`} onClick={() => abrirModal(7, setPlayer8class)} src={images2[player8Camisa]} alt="Jogador" />
+                            <img className={` ${styles[player9Pos]} ${styles[player9class]}`} onClick={() => abrirModal(8, setPlayer9class)} src={images2[player9Camisa]} alt="Jogador" />
+                            <img className={` ${styles[player10Pos]} ${styles[player10class]}`} onClick={() => abrirModal(9, setPlayer10class)} src={images2[player10Camisa]} alt="Jogador" />
+                            <img className={` ${styles[player11Pos]} ${styles[player11class]}`} onClick={() => abrirModal(10, setPlayer11class)} src={images2[player11Camisa]} alt="Jogador" />
+                        </>
+
+
+                    </div>
+                </div>
+
+                <ModalLineup isOpen={open} setOpen={setOpen} players={players} playerSelected={playerSelected} setCustomclass={customclass} lineup={lineupDoDia} setImage={setImages2} />
+            </div>
+
+
+        </>
+    )
 }
+
