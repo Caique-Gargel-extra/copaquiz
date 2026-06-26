@@ -113,7 +113,7 @@ export default function BlocoImgField({ titulo, texto, setAcertou }) {
     useEffect(() => {
 
         var hoje = new Date().toLocaleString().substr(0, 10)
-        if (lineups.length > 0 && players.length>0) {
+        if (lineups.length > 0 && players && players.length>0) {
 
             setLineupDoDia(lineups[generateidPerDate({ tamanho: lineups.length })]);
             /*if(localStorage.getItem("date")!=hoje)
@@ -129,8 +129,7 @@ export default function BlocoImgField({ titulo, texto, setAcertou }) {
     useEffect(() => {
         var hoje = new Date().toLocaleString().substr(0, 10)
         console.log(lineupDoDia)
-        console.log(lineupDoDia.players.length)
-        console.log(players.length)
+        console.log(players)
 
         if (lineupDoDia && lineupDoDia.players && lineupDoDia.players.length >= 10 && players && players.length >= 65) {
 
