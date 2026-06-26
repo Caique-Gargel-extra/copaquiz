@@ -10,3 +10,9 @@
     font-family: "Inter", sans-serif;
     font-weight: bold;
 }
+@media (max-width:450px) {
+    .btn{
+        display: none;
+
+    }
+}

@@ -231,3 +231,15 @@
     border-radius: 40px;
     border: 2px solid red;
 }
+@media (max-width:450px) {
+    .BlocoTexto{
+        width: 98%;
+
+    }
+    .BlocoTexto h1{
+        font-size: 2em;
+    }
+    .fieldImg{
+        width: 100%;
+    }
+}

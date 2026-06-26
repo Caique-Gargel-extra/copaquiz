@@ -63,14 +63,15 @@
         margin-left: 0;
     }
     .autoinput ul{
-        width: 87%;
+        width: 100%;
         margin-left: 0;
+        max-height: 30em;
     }
     .autoinput li{
         width: 100%;
     }
     .autoinput{
-        width: 82%;
-        margin-left: 2%;
+        width: 100%;
+        background-color: yellow;
     }
 }

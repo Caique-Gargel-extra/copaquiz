@@ -53,3 +53,18 @@
         justify-content: center;
         list-style-type: none;
     }
+    @media (max-width:450px) {
+    .menu{
+        width: 98%;
+
+    }
+    .containerMenu{
+        width: 98%;
+    }
+    .ropeBackGround{
+        display: none;
+    }
+    .social_list li{
+        margin-right: 0.5em;
+    }
+}
