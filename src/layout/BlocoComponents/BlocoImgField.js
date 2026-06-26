@@ -179,10 +179,18 @@ export default function BlocoImgField({ titulo, texto, setAcertou }) {
 
 
     }, [open])
+    const carregado =
+        lineupDoDia &&
+        lineupDoDia.players &&
+        players.length > 0 &&
+        player1Pos &&
+        player11Pos;
 
-    return (
-        <>
-            
+
+    if (carregado) {
+        return (
+            <>
+
                 <div className={styles.BlocoTexto}>
                     <h1>{titulo}</h1>
                     <p>Use as dicas para adivinhar o elenco </p>
@@ -211,8 +219,10 @@ export default function BlocoImgField({ titulo, texto, setAcertou }) {
 
                     <ModalLineup isOpen={open} setOpen={setOpen} players={players} playerSelected={playerSelected} setCustomclass={customclass} lineup={lineupDoDia} setImage={setImages2} />
                 </div>
-            
 
-        </>
-    )
+
+            </>
+        )
+    }
+
 }
