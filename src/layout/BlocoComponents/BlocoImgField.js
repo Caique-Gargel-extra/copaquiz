@@ -129,33 +129,36 @@ export default function BlocoImgField({ titulo, texto, setAcertou }) {
     useEffect(() => {
         var hoje = new Date().toLocaleString().substr(0, 10)
 
-        if (lineupDoDia && lineupDoDia.players && lineupDoDia.players.length >= 10 && players && players.length >= 65) {
+        if (
+            !lineupDoDia?.players ||
+            players.length === 0
+        ) return;
 
-            setPlayer1Pos(lineupDoDia.players[0].pos)
-            setPlayer2Pos(lineupDoDia.players[1].pos)
-            setPlayer3Pos(lineupDoDia.players[2].pos)
-            setPlayer4Pos(lineupDoDia.players[3].pos)
-            setPlayer5Pos(lineupDoDia.players[4].pos)
-            setPlayer6Pos(lineupDoDia.players[5].pos)
-            setPlayer7Pos(lineupDoDia.players[6].pos)
-            setPlayer8Pos(lineupDoDia.players[7].pos)
-            setPlayer9Pos(lineupDoDia.players[8].pos)
-            setPlayer10Pos(lineupDoDia.players[9].pos)
-            setPlayer11Pos(lineupDoDia.players[10].pos)
+        setPlayer1Pos(lineupDoDia.players[0].pos)
+        setPlayer2Pos(lineupDoDia.players[1].pos)
+        setPlayer3Pos(lineupDoDia.players[2].pos)
+        setPlayer4Pos(lineupDoDia.players[3].pos)
+        setPlayer5Pos(lineupDoDia.players[4].pos)
+        setPlayer6Pos(lineupDoDia.players[5].pos)
+        setPlayer7Pos(lineupDoDia.players[6].pos)
+        setPlayer8Pos(lineupDoDia.players[7].pos)
+        setPlayer9Pos(lineupDoDia.players[8].pos)
+        setPlayer10Pos(lineupDoDia.players[9].pos)
+        setPlayer11Pos(lineupDoDia.players[10].pos)
 
 
-            setPlayer1Camisa(players[lineupDoDia.players[0].id - 1].camisa)
-            setPlayer2Camisa(players[lineupDoDia.players[1].id - 1].camisa)
-            setPlayer3Camisa(players[lineupDoDia.players[2].id - 1].camisa)
-            setPlayer4Camisa(players[lineupDoDia.players[3].id - 1].camisa)
-            setPlayer5Camisa(players[lineupDoDia.players[4].id - 1].camisa)
-            setPlayer6Camisa(players[lineupDoDia.players[5].id - 1].camisa)
-            setPlayer7Camisa(players[lineupDoDia.players[6].id - 1].camisa)
-            setPlayer8Camisa(players[lineupDoDia.players[7].id - 1].camisa)
-            setPlayer9Camisa(players[lineupDoDia.players[8].id - 1].camisa)
-            setPlayer10Camisa(players[lineupDoDia.players[9].id - 1].camisa)
-            setPlayer11Camisa(players[lineupDoDia.players[10].id - 1].camisa)
-        }
+        setPlayer1Camisa(players[lineupDoDia.players[0].id - 1].camisa)
+        setPlayer2Camisa(players[lineupDoDia.players[1].id - 1].camisa)
+        setPlayer3Camisa(players[lineupDoDia.players[2].id - 1].camisa)
+        setPlayer4Camisa(players[lineupDoDia.players[3].id - 1].camisa)
+        setPlayer5Camisa(players[lineupDoDia.players[4].id - 1].camisa)
+        setPlayer6Camisa(players[lineupDoDia.players[5].id - 1].camisa)
+        setPlayer7Camisa(players[lineupDoDia.players[6].id - 1].camisa)
+        setPlayer8Camisa(players[lineupDoDia.players[7].id - 1].camisa)
+        setPlayer9Camisa(players[lineupDoDia.players[8].id - 1].camisa)
+        setPlayer10Camisa(players[lineupDoDia.players[9].id - 1].camisa)
+        setPlayer11Camisa(players[lineupDoDia.players[10].id - 1].camisa)
+
 
     }, [lineupDoDia])
 
@@ -187,7 +190,7 @@ export default function BlocoImgField({ titulo, texto, setAcertou }) {
         player11Pos && player10Camisa && player1Pos;
 
     if (!carregado) {
-        return <div>Carregando...</div>;
+        return <div>Carregando...</div>
     }
 
     return (
