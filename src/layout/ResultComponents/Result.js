@@ -13,7 +13,7 @@ function Result({ res, diario, primeiro }) {
     var classPais, classFuncao, classClube, classIdade, classAltura, classCamisa;
     var flagPrimeiro = false;
     //-----------------------------------------------------------
-    if (res.pais[0] === diario.pais[0])
+    if (res.pais === diario.pais)
         classPais = "certo"
     else
         classPais = "errado"
