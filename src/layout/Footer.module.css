@@ -1,0 +1,27 @@
+.footer{
+    margin-top: 2em;
+
+}
+.social_list li{
+    margin: 0 1em;
+    
+}
+.social_list li a{
+    text-decoration: none;
+    color:#10C239;
+    
+    
+}
+.social_list svg{
+    font-size: 2.5em;
+    cursor: pointer;
+    
+}
+.social_list{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.social_list svg:hover{
+    transform: scale(1.4);
+}

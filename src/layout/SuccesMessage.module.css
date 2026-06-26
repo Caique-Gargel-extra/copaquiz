@@ -1,0 +1,47 @@
+.succesMessage {
+   
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.bloco {
+    text-align: center;
+    margin: 0 auto;
+    padding: 2%;
+    border: 2px solid white;
+    border-radius: 25px;
+    margin-bottom: 2%;
+    width: 80%;
+    background-color: #1B4831;
+}
+.bloco p{
+    color: #979797;
+    text-align: justify;
+    font-size: 17.6px;
+}
+.RedirectContainer p{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+.RedirectContainer a{
+    padding: 0.5em;
+    font-size: 30px;
+}
+.RedirectContainer a:hover{
+   color: blue;
+}
+.imgRedirect{
+    width: 15%;
+}
+
+.imgRedirect:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}

@@ -1,0 +1,79 @@
+.background{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    min-height: 3000px;
+    background-color: rgba(0,0,0,0.624);
+}
+.topico{
+    color: #00faff;
+}
+.subtopico{
+    color: yellow;
+}
+.modal img{
+   
+    height: 70%;
+    margin-bottom: 1.5em;
+    max-height: 400px;
+    max-width: 100%;
+
+}
+.modal{
+    font-size: 17.6px;
+    position: relative;
+    background-color: #0e662f;
+    margin: 3% auto;
+    width: 47%;
+    min-height: 600px;
+    padding: 1em;
+    border: 2px solid white;
+    text-align: justify;
+    z-index: 25;
+    
+}
+.modal hr{
+    border: 2px solid white;
+    margin-bottom: 1em;
+    
+}
+.modal h1{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+.modal a:hover {
+    color: blue;
+}
+.modal p{
+    margin-bottom: 0.4em;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.modal b{
+    font-family:Arial, Helvetica, sans-serif;
+}
+.red{
+    color: red;
+}
+.green{
+    color: #00ff3b;
+}
+.yellow{
+    color: yellow;
+}
+.btn{
+    cursor: pointer;
+    background-color: #C72929;
+    padding: 0.5em;
+    position: absolute;
+    top:-10px;
+    right: -10px;
+    border: 2px solid white;
+}
+@media (max-width:450px){ 
+        .modal{
+            width: 80%;
+        }
+    
+}

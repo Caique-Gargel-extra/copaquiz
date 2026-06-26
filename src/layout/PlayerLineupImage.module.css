@@ -1,0 +1,10 @@
+.PlayerImg {
+    border: 2px solid white;
+    background-color: #515254;
+    margin-top: 1em;
+    width: 70%;
+    width: 190px;
+    height: 180px;
+    border-radius: 100%;
+    margin-bottom: 1em;
+}

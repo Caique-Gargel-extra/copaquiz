@@ -1,0 +1,31 @@
+.botaoDica{
+    text-align: center;
+    width:100%;
+    margin: 0 auto;
+    
+    padding-top: 2%;
+    z-index: 1;
+}
+
+.btn{
+    padding: 1% 5%;
+    background-color: #0e662f;
+    font-size: 20px;
+    border-radius: 80px;
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    border: 2px solid white;
+    cursor: pointer;
+}
+.btnDisabled{
+    padding: 1% 5%;
+    background-color: #0e662f;
+    font-size: 20px;
+    border-radius: 80px;
+    color: #979797;
+    text-align: center;
+    margin: 0 auto;
+    border: 2px solid #979797;
+    cursor: not-allowed;
+}

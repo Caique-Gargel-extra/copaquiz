@@ -1,0 +1,55 @@
+    .menu{
+       
+        text-align: center;
+        width:58%;
+        margin: 0 auto;
+        
+        
+    }
+    .ropeBackGround{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(../imgs/Rope3.png);
+        background-repeat: no-repeat;
+        background-position: 49.5%;
+        background-size: 40.5% 20px;
+        z-index: 0;
+    }
+    .containerMenu{
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .options{
+        position: relative;
+    }
+    .social_list li{
+        margin-right: 3em ;
+        z-index: 1;
+    }
+    .social_list li a{
+        text-decoration: none;
+        color: black;
+    }
+    .social_list img{
+        width: 70px;
+        cursor: pointer;
+    }
+    .social_list img:hover{
+        transform: scale(1.4);
+    
+    }
+    .active{
+        transform: scale(1.4);
+    }
+    .social_list{
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+    }

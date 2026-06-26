@@ -1,0 +1,21 @@
+.Player{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+}
+.form{
+    display: flex;
+    flex-direction: row;
+}
+.downUp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    width: 100%;
+    
+}

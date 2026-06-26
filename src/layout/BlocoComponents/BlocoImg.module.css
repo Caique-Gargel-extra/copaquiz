@@ -1,0 +1,15 @@
+.BlocoTexto{
+    text-align: center;
+    width:48%;
+    margin: 0 auto;
+    background-color: #0C873D;
+    padding: 2%;
+    border: 2px solid white;
+    border-radius: 25px;
+    margin: 2% auto;
+}
+.BlocoTexto p{
+    text-align: justify;
+    font-size: 20.6px;
+    margin: 0 1em;
+}

@@ -1,0 +1,45 @@
+.containerRes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 50%;
+    margin: 1em;
+    border-radius: 10px;
+    border: 0.5px solid white;
+}
+
+.containerRes img {
+    margin: 0 0.25em 0 0.25em;
+    width: 110px;
+}
+
+.containerRes h1 {
+    font-size: 45px;
+    padding-left: 1em;
+    text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black,
+        1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+}
+
+.certo {
+    background-color: #35B956;
+}
+
+.errado {
+    background-color: #DF5858;
+}
+
+.certo:hover {
+    background-color: #19e84c;
+}
+
+.errado:hover {
+    background-color: #f80707;
+}
+
+@media (max-width:450px) {
+    .containerRes {
+        width: 90%;
+    }
+
+}

@@ -1,0 +1,183 @@
+.quadrado {
+  margin: 1em 0.5em 0 0.5em;
+  height: 100px;
+  width: 100px;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  font-size: 16px;
+
+}
+
+.container img {
+  width: 100px;
+  background-color: #1E2328;
+}
+
+
+.container {
+  margin-top: 1em;
+  
+}
+
+.quadrado p {
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 3px black, 0 0 5px black;
+  font-size: 18px;
+  margin: 0em 0.5em 0 0.5em;
+}
+
+.flipCardInner p {
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 3px black, 0 0 5px black;
+  font-size: 18px;
+  margin: 0em 0.5em 0 0.5em;
+}
+
+.errado {
+  background-color: red;
+}
+
+.certo {
+  background-color: #10c239;
+}
+
+.certo:hover {
+  background-color: #19e84c;
+}
+
+.errado:hover {
+  background-color: #e35454;
+}
+
+.parcial {
+  background-color: #d49e15;
+}
+
+.upper {
+
+  background-image: url(../imgs/Upper.png);
+  background-color: red;
+}
+
+.lower {
+  background-image: url(../imgs/Lower.png);
+  background-color: red;
+}
+
+.container hr {
+  font-size: 14px;
+  margin: 0em 0.5em 0 0.5em;
+  visibility: hidden;
+}
+
+/*classes do flip-quadrado*/
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
+
+/* This container is needed to position the front and back side */
+.flipCardInner {
+  margin: 1em 0.5em 0 0.5em;
+  height: 100px;
+  width: 100px;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  font-size: 16px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.fliped {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flipCardFront,
+.flipCardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flipCardFront {
+
+  color: black;
+}
+
+/* Style the back side */
+.flipCardBack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+.categorie {
+  font-weight: bold;
+  background-color: #c4c29f;
+  border-radius: 5px;
+  text-shadow: 0 0 3px white, 0 0 5px white;
+  font-size: 18px;
+  margin: 0em 0.5em 0 0.5em;
+  color: black;
+}
+
+@media (max-width:450px) {
+  .quadrado {
+    max-height: 70px;
+    width: 70px;
+    margin: 1em 0.2em 0 0.2em;
+
+  }
+
+  .flipCardInner {
+    max-height: 70px;
+    width: 70px;
+    margin: 1em 0.2em 0 0.2em;
+
+  }
+
+  .quadrado p {
+    font-weight: bold;
+    text-shadow: 0 0 3px black, 0 0 5px black;
+    font-size: 15px;
+
+  }
+
+  .container img {
+    width: 70px;
+    background-color: #1E2328;
+
+  }
+
+  .container {
+    display: inline-block;
+
+  }
+
+  .upper {
+    background-image: url(../imgs/UpperMobile.png);
+
+  }
+
+  .lower {
+    background-image: url(../imgs/LowerMobile.png);
+
+  }
+}

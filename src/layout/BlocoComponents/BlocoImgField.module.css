@@ -1,0 +1,233 @@
+.BlocoTexto {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    background-color: #0C873D;
+    padding: 2%;
+    border: 2px solid white;
+    border-radius: 25px;
+    margin: 2% auto;
+}
+
+.BlocoTexto p {
+
+    text-align: center;
+    font-size: 20.6px;
+    margin: 0 1em;
+    margin-bottom: 1em;
+}
+
+.imgContainer {
+    width: 100%;
+    position: relative;
+}
+
+.fieldImg {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    display: block;
+}
+
+.PE {
+    position: absolute;
+    top: 20%;
+    left: 28%;
+
+    z-index: 3;
+    width: 8%;
+    height: auto;
+}
+
+.PD {
+    position: absolute;
+    top: 20%;
+    right: 28%;
+    color: #fff;
+    z-index: 3;
+    width: 8%;
+    height: auto;
+}
+
+.ATA {
+    position: absolute;
+    top: 17%;
+    right: 45.5%;
+    color: #fff;
+    z-index: 3;
+    width: 8%;
+    height: auto;
+}
+
+.ATAE {
+    position: absolute;
+    top: 17%;
+    left: 40.5%;
+    color: #fff;
+    z-index: 3;
+    width: 8%;
+    height: auto;
+}
+
+.ATAD {
+    position: absolute;
+    top: 17%;
+    right: 40.5%;
+    color: #fff;
+    z-index: 3;
+    width: 8%;
+    height: auto;
+}
+
+.MCE {
+    position: absolute;
+    top: 41%;
+    left: 33%;
+    z-index: 3;
+    width: 8%;
+    height: auto;
+}
+.ME {
+    position: absolute;
+    top: 41%;
+    left: 26%;
+    z-index: 3;
+    width: 8%;
+    height: auto;
+}
+
+.MCD {
+    position: absolute;
+    top: 41%;
+    right: 33%;
+    z-index: 3;
+    width: 8%;
+    height: auto;
+}
+.MD {
+    position: absolute;
+    top: 41%;
+    right: 26%;
+    z-index: 3;
+    width: 8%;
+    height: auto;
+}
+
+.MC {
+    position: absolute;
+    top: 39%;
+    left: 46.5%;
+    color: #fff;
+    z-index: 3;
+    width: 8%;
+    height: auto;
+}
+
+.ZGE {
+    position: absolute;
+    bottom: 27%;
+    left: 37%;
+    color: #fff;
+    z-index: 3;
+    width: 8%;
+    height: auto;
+}
+.ZGC {
+    position: absolute;
+    bottom: 27%;
+    right: 46%;
+    z-index: 3;
+    width: 8%;
+    height: auto;
+}
+
+.ZGD {
+    position: absolute;
+    bottom: 27%;
+    right: 37%;
+    z-index: 3;
+    width: 8%;
+    height: auto;
+}
+
+.LE {
+    position: absolute;
+    bottom: 33%;
+    left: 25%;
+    color: #fff;
+    z-index: 3;
+    width: 8%;
+    height: auto;
+}
+
+.LD {
+    position: absolute;
+    bottom: 33%;
+    right: 25%;
+    color: #fff;
+    z-index: 3;
+    width: 8%;
+    height: auto;
+}
+.MEI {
+    position: absolute;
+    top: 32%;
+    left: 46.5%;
+    color: #fff;
+    z-index: 3;
+    width: 8%;
+    height: auto;
+}
+.VOL {
+    position: absolute;
+    top: 52%;
+    left: 46.5%;
+    color: #fff;
+    z-index: 3;
+    width: 8%;
+    height: auto;
+}
+.VOLE {
+    position: absolute;
+    top: 50%;
+    left: 39.5%;
+    color: #fff;
+    z-index: 3;
+    width: 8%;
+    height: auto;
+}
+.VOLD {
+    position: absolute;
+    top: 50%;
+    right: 38.5%;
+    color: #fff;
+    z-index: 3;
+    width: 8%;
+    height: auto;
+}
+
+.fieldImgContainer img:hover {
+    transform: scale(1.4);
+    cursor: pointer;
+}
+
+.GOL {
+    position: absolute;
+    bottom: 10%;
+    left: 46.5%;
+    color: #fff;
+    z-index: 3;
+    width: 8%;
+    height: auto;
+}
+.certo{
+    background-color: #147037;
+    border-radius: 40px;
+    border: 2px solid #147037;
+    pointer-events: none
+}
+.errado{
+    background-color: red;
+    border-radius: 40px;
+    border: 2px solid red;
+}
