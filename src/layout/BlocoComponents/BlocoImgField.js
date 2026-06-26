@@ -4,7 +4,7 @@ import ImgPlayer from '../../imgs/0.png';
 import { useEffect, useState } from 'react';
 import ModalLineup from "../ModalLineup";
 import { generateidPerDate } from '../../utils/helpers';
-export default function BlocoImgField({ titulo, texto,setAcertou }) {
+export default function BlocoImgField({ titulo, texto, setAcertou }) {
     const [open, setOpen] = useState(false)
     const [players, setPlayers] = useState([])
     const [lineups, setLineups] = useState([])
@@ -170,28 +170,27 @@ export default function BlocoImgField({ titulo, texto,setAcertou }) {
 
     };
     useEffect(() => {
-        if(player1class=="certo"&&player2class=="certo"&&player3class=="certo"&&player4class=="certo"
-            &&player5class=="certo"&&player6class=="certo"&&player7class=="certo"&&player8class=="certo"
-            &&player9class=="certo"&&player10class=="certo"&&player11class=="certo"
-        )
-        {
+        if (player1class == "certo" && player2class == "certo" && player3class == "certo" && player4class == "certo"
+            && player5class == "certo" && player6class == "certo" && player7class == "certo" && player8class == "certo"
+            && player9class == "certo" && player10class == "certo" && player11class == "certo"
+        ) {
             setAcertou(true)
         }
-            
+
 
     }, [open])
 
     return (
         <>
+            {player11Camisa && player11Pos && (
+                <div className={styles.BlocoTexto}>
+                    <h1>{titulo}</h1>
+                    <p>Use as dicas para adivinhar o elenco </p>
+                    <p>titular da seleção <b>{lineupDoDia.pais} na final da copa de {lineupDoDia.ano}</b></p>
+                    <div className={styles.imgContainer}>
+                        <img className={styles.fieldImg} src={ImgField} alt={titulo} />
+                        <div className={styles.fieldImgContainer}>
 
-            <div className={styles.BlocoTexto}>
-                <h1>{titulo}</h1>
-                <p>Use as dicas para adivinhar o elenco </p>
-                <p>titular da seleção <b>{lineupDoDia.pais} na final da copa de {lineupDoDia.ano}</b></p>
-                <div className={styles.imgContainer}>
-                    <img className={styles.fieldImg} src={ImgField} alt={titulo} />
-                    <div className={styles.fieldImgContainer}>
-                        {player11Camisa && player11Pos && (
                             <>
                                 <img className={` ${styles[player1Pos]} ${styles[player1class]}`} onClick={() => abrirModal(0, setPlayer1class)} src={images2[player1Camisa]} alt="Jogador" />
                                 <img className={` ${styles[player2Pos]} ${styles[player2class]}`} onClick={() => abrirModal(1, setPlayer2class)} src={images2[player2Camisa]} alt="Jogador" />
@@ -205,12 +204,14 @@ export default function BlocoImgField({ titulo, texto,setAcertou }) {
                                 <img className={` ${styles[player10Pos]} ${styles[player10class]}`} onClick={() => abrirModal(9, setPlayer10class)} src={images2[player10Camisa]} alt="Jogador" />
                                 <img className={` ${styles[player11Pos]} ${styles[player11class]}`} onClick={() => abrirModal(10, setPlayer11class)} src={images2[player11Camisa]} alt="Jogador" />
                             </>
-                        )}
 
+
+                        </div>
                     </div>
+
+                    <ModalLineup isOpen={open} setOpen={setOpen} players={players} playerSelected={playerSelected} setCustomclass={customclass} lineup={lineupDoDia} setImage={setImages2} />
                 </div>
-                <ModalLineup isOpen={open} setOpen={setOpen} players={players} playerSelected={playerSelected} setCustomclass={customclass} lineup={lineupDoDia} setImage={setImages2} />
-            </div>
+            )}
 
         </>
     )

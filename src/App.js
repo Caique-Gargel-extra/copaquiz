@@ -15,8 +15,8 @@ function App() {
       <Logo/>
       
       <Routes>
-        <Route path='/' element={<Player/>}/>
-        <Route path='/brazil' element={<Brazil/>}/>
+        <Route path='/' element={<Brazil/>}/>
+        <Route path='/classic' element={<Player/>}/>
         <Route path='/lineup' element={<Lineup/>}/>
         <Route path='/silhouette' element={<Silhouette/>}/>
       

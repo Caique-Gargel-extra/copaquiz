@@ -41,9 +41,9 @@ function MenuModos({ modo }) {
                 <div className={styles.options}>
                     <div className={styles.ropeBackGround}></div>
                     <ul className={styles.social_list}>
-                        <li><Link to="/brazil" ><img title="Quem é o craque Brasileiro" className={` ${styles[clas4]} `} src={img4}></img></Link></li>
+                        <li><Link to="/" ><img title="Quem é o craque Brasileiro" className={` ${styles[clas4]} `} src={img4}></img></Link></li>
                         <li><Link to="/lineup" ><img title="Qual é a Lineup!" className={` ${styles[clas1]} `} src={img1}></img></Link></li>
-                        <li><Link to="/"><img title="Modo Classico" className={` ${styles[clas3]} `} src={img3}></img></Link></li>
+                        <li><Link to="/classic"><img title="Modo Classico" className={` ${styles[clas3]} `} src={img3}></img></Link></li>
                         <li><Link to="/silhouette" ><img title="Adivinhe a Silhueta!" className={` ${styles[clas2]} `} src={img2}></img></Link></li>
                     </ul>
                 </div>
