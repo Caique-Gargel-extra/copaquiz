@@ -9,18 +9,18 @@ export default function BlocoImgField({ titulo, texto, setAcertou }) {
     const [players, setPlayers] = useState([])
     const [lineups, setLineups] = useState([])
     const [lineupDoDia, setLineupDoDia] = useState([])
-    const [player1Pos, setPlayer1Pos] = useState(null);
-    const [player2Pos, setPlayer2Pos] = useState(null);
-    const [player3Pos, setPlayer3Pos] = useState(null);
-    const [player4Pos, setPlayer4Pos] = useState(null);
-    const [player5Pos, setPlayer5Pos] = useState(null);
-    const [player6Pos, setPlayer6Pos] = useState(null);
-    const [player7Pos, setPlayer7Pos] = useState(null);
-    const [player8Pos, setPlayer8Pos] = useState(null);
-    const [player9Pos, setPlayer9Pos] = useState(null);
-    const [player10Pos, setPlayer10Pos] = useState(null);
-    const [player11Pos, setPlayer11Pos] = useState(null);
-    const [playerSelected, setPlayerSelected] = useState(null);
+    const [player1Pos, setPlayer1Pos] = useState();
+    const [player2Pos, setPlayer2Pos] = useState();
+    const [player3Pos, setPlayer3Pos] = useState();
+    const [player4Pos, setPlayer4Pos] = useState();
+    const [player5Pos, setPlayer5Pos] = useState();
+    const [player6Pos, setPlayer6Pos] = useState();
+    const [player7Pos, setPlayer7Pos] = useState();
+    const [player8Pos, setPlayer8Pos] = useState();
+    const [player9Pos, setPlayer9Pos] = useState();
+    const [player10Pos, setPlayer10Pos] = useState();
+    const [player11Pos, setPlayer11Pos] = useState();
+    const [playerSelected, setPlayerSelected] = useState();
 
     const [player1Camisa, setPlayer1Camisa] = useState(0);
     const [player2Camisa, setPlayer2Camisa] = useState(0);
@@ -31,7 +31,7 @@ export default function BlocoImgField({ titulo, texto, setAcertou }) {
     const [player7Camisa, setPlayer7Camisa] = useState(0);
     const [player8Camisa, setPlayer8Camisa] = useState(0);
     const [player9Camisa, setPlayer9Camisa] = useState(0);
-    const [player10Camisa, setPlayer10Camisa] = useState(null);
+    const [player10Camisa, setPlayer10Camisa] = useState(0);
     const [player11Camisa, setPlayer11Camisa] = useState(0);
 
     const [player1class, setPlayer1class] = useState('');
@@ -113,7 +113,7 @@ export default function BlocoImgField({ titulo, texto, setAcertou }) {
     useEffect(() => {
 
         var hoje = new Date().toLocaleString().substr(0, 10)
-        if (lineups.length > 0) {
+        if (lineups.length > 0 && players.length>0) {
 
             setLineupDoDia(lineups[generateidPerDate({ tamanho: lineups.length })]);
             /*if(localStorage.getItem("date")!=hoje)
@@ -125,42 +125,42 @@ export default function BlocoImgField({ titulo, texto, setAcertou }) {
                 setListResposta(JSON.parse(localStorage.getItem("listRes")))*/
         }
 
-    }, [lineups])
+    }, [lineups,players])
     useEffect(() => {
         var hoje = new Date().toLocaleString().substr(0, 10)
+        console.log(lineupDoDia)
+        console.log(lineupDoDia.players.length)
+        console.log(players.length)
 
-        if (
-            !lineupDoDia?.players ||
-            players.length === 0
-        ) return;
+        if (lineupDoDia && lineupDoDia.players && lineupDoDia.players.length >= 10 && players && players.length >= 65) {
 
-        setPlayer1Pos(lineupDoDia.players[0].pos)
-        setPlayer2Pos(lineupDoDia.players[1].pos)
-        setPlayer3Pos(lineupDoDia.players[2].pos)
-        setPlayer4Pos(lineupDoDia.players[3].pos)
-        setPlayer5Pos(lineupDoDia.players[4].pos)
-        setPlayer6Pos(lineupDoDia.players[5].pos)
-        setPlayer7Pos(lineupDoDia.players[6].pos)
-        setPlayer8Pos(lineupDoDia.players[7].pos)
-        setPlayer9Pos(lineupDoDia.players[8].pos)
-        setPlayer10Pos(lineupDoDia.players[9].pos)
-        setPlayer11Pos(lineupDoDia.players[10].pos)
-
-
-        setPlayer1Camisa(players[lineupDoDia.players[0].id - 1].camisa)
-        setPlayer2Camisa(players[lineupDoDia.players[1].id - 1].camisa)
-        setPlayer3Camisa(players[lineupDoDia.players[2].id - 1].camisa)
-        setPlayer4Camisa(players[lineupDoDia.players[3].id - 1].camisa)
-        setPlayer5Camisa(players[lineupDoDia.players[4].id - 1].camisa)
-        setPlayer6Camisa(players[lineupDoDia.players[5].id - 1].camisa)
-        setPlayer7Camisa(players[lineupDoDia.players[6].id - 1].camisa)
-        setPlayer8Camisa(players[lineupDoDia.players[7].id - 1].camisa)
-        setPlayer9Camisa(players[lineupDoDia.players[8].id - 1].camisa)
-        setPlayer10Camisa(players[lineupDoDia.players[9].id - 1].camisa)
-        setPlayer11Camisa(players[lineupDoDia.players[10].id - 1].camisa)
+            setPlayer1Pos(lineupDoDia.players[0].pos)
+            setPlayer2Pos(lineupDoDia.players[1].pos)
+            setPlayer3Pos(lineupDoDia.players[2].pos)
+            setPlayer4Pos(lineupDoDia.players[3].pos)
+            setPlayer5Pos(lineupDoDia.players[4].pos)
+            setPlayer6Pos(lineupDoDia.players[5].pos)
+            setPlayer7Pos(lineupDoDia.players[6].pos)
+            setPlayer8Pos(lineupDoDia.players[7].pos)
+            setPlayer9Pos(lineupDoDia.players[8].pos)
+            setPlayer10Pos(lineupDoDia.players[9].pos)
+            setPlayer11Pos(lineupDoDia.players[10].pos)
 
 
-    }, [lineupDoDia])
+            setPlayer1Camisa(players[lineupDoDia.players[0].id - 1].camisa)
+            setPlayer2Camisa(players[lineupDoDia.players[1].id - 1].camisa)
+            setPlayer3Camisa(players[lineupDoDia.players[2].id - 1].camisa)
+            setPlayer4Camisa(players[lineupDoDia.players[3].id - 1].camisa)
+            setPlayer5Camisa(players[lineupDoDia.players[4].id - 1].camisa)
+            setPlayer6Camisa(players[lineupDoDia.players[5].id - 1].camisa)
+            setPlayer7Camisa(players[lineupDoDia.players[6].id - 1].camisa)
+            setPlayer8Camisa(players[lineupDoDia.players[7].id - 1].camisa)
+            setPlayer9Camisa(players[lineupDoDia.players[8].id - 1].camisa)
+            setPlayer10Camisa(players[lineupDoDia.players[9].id - 1].camisa)
+            setPlayer11Camisa(players[lineupDoDia.players[10].id - 1].camisa)
+        }
+
+    }, [lineupDoDia,players])
 
 
 
@@ -182,51 +182,40 @@ export default function BlocoImgField({ titulo, texto, setAcertou }) {
 
 
     }, [open])
-    const carregado =
-        lineupDoDia &&
-        lineupDoDia.players &&
-        players.length > 0 &&
-        player1Pos &&
-        player11Pos && player10Camisa && player1Pos;
-
-    if (!carregado) {
-        return <div>Carregando...</div>
-    }
 
     return (
         <>
+            {player11Camisa && player11Pos && (
+                <div className={styles.BlocoTexto}>
+                    <h1>{titulo}</h1>
+                    <p>Use as dicas para adivinhar o elenco </p>
+                    <p>titular da seleção <b>{lineupDoDia.pais} na final da copa de {lineupDoDia.ano}</b></p>
+                    <div className={styles.imgContainer}>
+                        <img className={styles.fieldImg} src={ImgField} alt={titulo} />
+                        <div className={styles.fieldImgContainer}>
 
-            <div className={styles.BlocoTexto}>
-                <h1>{titulo}</h1>
-                <p>Use as dicas para adivinhar o elenco </p>
-                <p>titular da seleção <b>{lineupDoDia.pais} na final da copa de {lineupDoDia.ano}</b></p>
-                <div className={styles.imgContainer}>
-                    <img className={styles.fieldImg} src={ImgField} alt={titulo} />
-                    <div className={styles.fieldImgContainer}>
-
-                        <>
-                            <img className={` ${styles[player1Pos]} ${styles[player1class]}`} onClick={() => abrirModal(0, setPlayer1class)} src={images2[player1Camisa]} alt="Jogador" />
-                            <img className={` ${styles[player2Pos]} ${styles[player2class]}`} onClick={() => abrirModal(1, setPlayer2class)} src={images2[player2Camisa]} alt="Jogador" />
-                            <img className={` ${styles[player3Pos]} ${styles[player3class]}`} onClick={() => abrirModal(2, setPlayer3class)} src={images2[player3Camisa]} alt="Jogador" />
-                            <img className={` ${styles[player4Pos]} ${styles[player4class]}`} onClick={() => abrirModal(3, setPlayer4class)} src={images2[player4Camisa]} alt="Jogador" />
-                            <img className={` ${styles[player5Pos]} ${styles[player5class]}`} onClick={() => abrirModal(4, setPlayer5class)} src={images2[player5Camisa]} alt="Jogador" />
-                            <img className={` ${styles[player6Pos]} ${styles[player6class]}`} onClick={() => abrirModal(5, setPlayer6class)} src={images2[player6Camisa]} alt="Jogador" />
-                            <img className={` ${styles[player7Pos]} ${styles[player7class]}`} onClick={() => abrirModal(6, setPlayer7class)} src={images2[player7Camisa]} alt="Jogador" />
-                            <img className={` ${styles[player8Pos]} ${styles[player8class]}`} onClick={() => abrirModal(7, setPlayer8class)} src={images2[player8Camisa]} alt="Jogador" />
-                            <img className={` ${styles[player9Pos]} ${styles[player9class]}`} onClick={() => abrirModal(8, setPlayer9class)} src={images2[player9Camisa]} alt="Jogador" />
-                            <img className={` ${styles[player10Pos]} ${styles[player10class]}`} onClick={() => abrirModal(9, setPlayer10class)} src={images2[player10Camisa]} alt="Jogador" />
-                            <img className={` ${styles[player11Pos]} ${styles[player11class]}`} onClick={() => abrirModal(10, setPlayer11class)} src={images2[player11Camisa]} alt="Jogador" />
-                        </>
+                            <>
+                                <img className={` ${styles[player1Pos]} ${styles[player1class]}`} onClick={() => abrirModal(0, setPlayer1class)} src={images2[player1Camisa]} alt="Jogador" />
+                                <img className={` ${styles[player2Pos]} ${styles[player2class]}`} onClick={() => abrirModal(1, setPlayer2class)} src={images2[player2Camisa]} alt="Jogador" />
+                                <img className={` ${styles[player3Pos]} ${styles[player3class]}`} onClick={() => abrirModal(2, setPlayer3class)} src={images2[player3Camisa]} alt="Jogador" />
+                                <img className={` ${styles[player4Pos]} ${styles[player4class]}`} onClick={() => abrirModal(3, setPlayer4class)} src={images2[player4Camisa]} alt="Jogador" />
+                                <img className={` ${styles[player5Pos]} ${styles[player5class]}`} onClick={() => abrirModal(4, setPlayer5class)} src={images2[player5Camisa]} alt="Jogador" />
+                                <img className={` ${styles[player6Pos]} ${styles[player6class]}`} onClick={() => abrirModal(5, setPlayer6class)} src={images2[player6Camisa]} alt="Jogador" />
+                                <img className={` ${styles[player7Pos]} ${styles[player7class]}`} onClick={() => abrirModal(6, setPlayer7class)} src={images2[player7Camisa]} alt="Jogador" />
+                                <img className={` ${styles[player8Pos]} ${styles[player8class]}`} onClick={() => abrirModal(7, setPlayer8class)} src={images2[player8Camisa]} alt="Jogador" />
+                                <img className={` ${styles[player9Pos]} ${styles[player9class]}`} onClick={() => abrirModal(8, setPlayer9class)} src={images2[player9Camisa]} alt="Jogador" />
+                                <img className={` ${styles[player10Pos]} ${styles[player10class]}`} onClick={() => abrirModal(9, setPlayer10class)} src={images2[player10Camisa]} alt="Jogador" />
+                                <img className={` ${styles[player11Pos]} ${styles[player11class]}`} onClick={() => abrirModal(10, setPlayer11class)} src={images2[player11Camisa]} alt="Jogador" />
+                            </>
 
 
+                        </div>
                     </div>
+
+                    <ModalLineup isOpen={open} setOpen={setOpen} players={players} playerSelected={playerSelected} setCustomclass={customclass} lineup={lineupDoDia} setImage={setImages2} />
                 </div>
-
-                <ModalLineup isOpen={open} setOpen={setOpen} players={players} playerSelected={playerSelected} setCustomclass={customclass} lineup={lineupDoDia} setImage={setImages2} />
-            </div>
-
+            )}
 
         </>
     )
 }
-
