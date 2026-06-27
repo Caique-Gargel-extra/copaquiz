@@ -39,7 +39,7 @@ export default function Player() {
         var hoje = new Date().toLocaleString().substr(0, 10)
         if (players.length > 0) {
 
-            setplayerDoDia(players[generateidPerDate({ tamanho: players.length })]);
+            setplayerDoDia(players[382/*generateidPerDate({ tamanho: players.length })*/]);
 
             if (localStorage.getItem("date") != hoje) {
                 localStorage.removeItem("listRes")

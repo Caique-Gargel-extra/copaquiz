@@ -23,7 +23,7 @@ export default function SuccesMessage({ message }) {
                 <h1>{message}</h1><br />
                 <div className={styles.RedirectContainer} id="carrosel" onLoad={scrollToBottom} ref={myRef}>
                     <p>faça uma doação para manter o projeto vivo🥺 </p>
-                    <a href="/donation"><img className={styles.imgRedirect} src={imgF} /></a>
+                    <a href="https://pix.sejaefi.com.br/pagar/a0655f0fc04bd18517d8f8a394299e52767cbd3f.html"><img className={styles.imgRedirect} src={imgF} /></a>
                     <p>Aproveite para jogar os outros modos:</p>
                     <a href="/" to="Classico"><img className={styles.imgRedirect} src={imgA} /></a>
                     <a href="/silhouette"><img className={styles.imgRedirect} src={imgB} /></a>

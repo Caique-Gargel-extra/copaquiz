@@ -1,12 +1,13 @@
-    .menu{
-       
+    .menu {
+
         text-align: center;
-        width:58%;
+        width: 58%;
         margin: 0 auto;
-        
-        
+
+
     }
-    .ropeBackGround{
+
+    .ropeBackGround {
         position: absolute;
         top: 0;
         left: 0;
@@ -18,59 +19,79 @@
         background-size: 40.5% 20px;
         z-index: 0;
     }
-    .containerMenu{
-        
+
+    .containerMenu {
+
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
         width: 100%;
     }
-    .options{
+
+    .options {
         position: relative;
     }
-    .social_list li{
-        margin-right: 3em ;
+
+    .social_list li {
+        margin-right: 3em;
         z-index: 1;
     }
-    .social_list li a{
+
+    .social_list li a {
         text-decoration: none;
         color: black;
     }
-    .social_list img{
+
+    .social_list img {
         width: 70px;
         cursor: pointer;
     }
-    .social_list img:hover{
+
+    .social_list img:hover {
         transform: scale(1.4);
-    
+
     }
-    .active{
+
+    .active {
         transform: scale(1.4);
     }
-    .social_list{
+
+    .social_list {
         display: flex;
         justify-content: center;
         list-style-type: none;
     }
-    @media (max-width:450px) {
-    .menu{
-        width: 98%;
-        display: flex;
 
+    @media (max-width:450px) {
+        .menu {
+            width: 98%;
+            display: flex;
+
+        }
+
+        .containerMenu {
+            width: 98%;
+            display: flex;
+        }
+
+        .ropeBackGround {
+            display: none;
+        }
+
+        .social_list li {
+            margin-right: 0.5em;
+            display: flex;
+        }
+
+        .social_list img {
+            width: 70px;
+        }
     }
-    .containerMenu{
-        width: 98%;
-        display: flex;
+    @media(min-width:2550px)
+    {
+       
+        .ropeBackGround{
+            background-size: 20.5% 20px;
+        }
     }
-    .ropeBackGround{
-        display: none;
-    }
-    .social_list li{
-        margin-right: 0.5em;
-        display: flex;
-    }
-    .social_list img{
-        width: 70px;
-    }
-}

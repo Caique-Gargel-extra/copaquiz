@@ -35,11 +35,10 @@ export default function Brazil() {
     }, [])
     /*SET PLAYER DO DIA*/
     useEffect(() => {
-        localStorage.clear()
         var hoje = new Date().toLocaleString().substr(0, 10)
         if (players.length > 0) {
 
-            setplayerDoDia(players[generateidPerDate({ tamanho: players.length })]);
+            setplayerDoDia(players[34/*generateidPerDate({ tamanho: players.length })*/]);
 
             if(localStorage.getItem("dateBrazil")!=hoje)
             {

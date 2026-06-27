@@ -1,6 +1,6 @@
-.BlocoTexto{
+.BlocoTexto {
     text-align: center;
-    width:48%;
+    width: 48%;
     margin: 0 auto;
     background-color: #0C873D;
     padding: 2%;
@@ -8,19 +8,27 @@
     border-radius: 25px;
     margin: 2% auto;
 }
-.BlocoTexto p{
-    
+
+.BlocoTexto p {
+
     text-align: justify;
     font-size: 20.6px;
     margin: 0 1em;
 }
 
 @media (max-width:450px) {
-    .BlocoTexto{
+    .BlocoTexto {
         width: 98%;
-       
+
         margin-right: 0;
         margin-left: 0;
     }
+
 }
-   
+
+@media(min-width:2550px) {
+
+    .BlocoTexto {
+        width:  30%;
+    }
+}
