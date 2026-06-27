@@ -6,6 +6,7 @@ import Brazil from './pages/Brazil';
 import Lineup from './pages/Lineup';
 import Silhouette from './pages/Silhouette';
 import MenuModos from './layout/MenuModos';
+import { Analytics } from "@vercel/analytics/react"
 import Footer from './layout/Footer';
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       </Routes>
       <Footer/>
     </Router>
+    <Analytics/>
    </>
   );
 }
